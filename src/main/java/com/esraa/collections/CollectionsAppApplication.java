@@ -80,10 +80,32 @@ public class CollectionsAppApplication {
 		        System.out.println(numsList.get(0));
 		        
 		        
+		        String three = null;
+		        Set<String> set = Set.of("1", "2", "3", "4", "5");
+		        
+		        int count = 0 ;
+		        for (String item : set)
+		        {
+		        	count ++ ;
+		        	System.out.println(count + "from loop");
+		            if (item.equals(new String("3")))
+		            {
+		                three = item;
+		                break ;
+		            }
+		        }
+		       System.out.println(three);
 		         
 		         
-		         
-		
+		       Set<String> set2 = Set.of("1", "2", "3", "4", "5"); 
+		       System.out.println(set2);
+		       
+		       
+		       
+		       System.out.println(set.contains("3") +"_"+ "using contains");
+		       
+		       
+		       
 		
 	}
 
