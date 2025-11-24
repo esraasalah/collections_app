@@ -1,6 +1,7 @@
 package com.esraa.collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,7 +17,6 @@ public class CollectionsAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CollectionsAppApplication.class, args);
-		
 		
 		
 		
@@ -51,8 +51,6 @@ public class CollectionsAppApplication {
 		         {System.out.println(i);}
 		
 		         
-		         
-		         
 		          // b_ using  ierattor 
 		         System.out.println("using  ierattor");
 		        Iterator<Integer> iterator = nums.iterator();
@@ -72,9 +70,6 @@ public class CollectionsAppApplication {
 		          // a_ convert to Array 
 		        Integer[] numsArr = nums.toArray(new Integer[0]) ;
 		        
-		        
-		        
-		       
 		         //b_ convert to list 
 		        List<Integer> numsList = new ArrayList<>(nums);
 		        System.out.println(numsList.get(0));
@@ -101,8 +96,63 @@ public class CollectionsAppApplication {
 		       System.out.println(set2);
 		       
 		       
-		       
 		       System.out.println(set.contains("3") +"_"+ "using contains");
+		       
+		       
+		       Set<String> names = new HashSet<>();
+		       
+		       // transient 
+		       TransientExample.writeToFile();
+		       
+		       TransientExample.readFromFile();
+		       
+		       
+		       // Arrays.asList()
+		       
+		       
+		       List<String>  mylist = Arrays.asList("esraa","omar","hamza") ;
+		       
+		       ArrayList<String> myNewList = new ArrayList<>(Arrays.asList("esraa","omar","hamza"));
+		       
+		       
+		       myNewList.add("nancy");
+		       
+		       System.out.println(mylist);
+		       
+		       System.out.println(myNewList);
+		    
+		       Collection<String> c = new ArrayList<>();
+		       
+		       List<String> l =(List<String>) c ;
+		       
+		       
+		       
+		       
+		       // maps 
+		       HashMap<String,Integer> map = new HashMap<>();
+		       map.put("esraa", 31);
+		       map.put("omar"  , 5) ;
+		       map.put("hamza", 7);
+		       
+		       System.out.println(map);
+		    		   
+		       System.out.println(map.containsKey("eaa"));
+		       
+		       
+		       
+		       
+		       // diffrence between put and replace 
+		       
+		       // put add in not exist _ update if exist 
+		       map.put("hamza", 10);
+		       map.put("maha", 6);
+		       System.out.println(map);
+		     // update if exist else no thing happens 
+		       
+		       map.replace("kkkk", 3);
+		       
+		       System.out.println(map);
+		       
 		       
 		       
 		       
